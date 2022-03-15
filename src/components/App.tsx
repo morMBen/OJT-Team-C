@@ -1,7 +1,11 @@
 import React from 'react';
-
+import TempLoginPage from './TempLoginPage/TempLoginPage';
 function App() {
-  return <div className='App'></div>;
+  return (
+    <>
+      <TempLoginPage />
+    </>
+  );
 }
 
 export default App;
