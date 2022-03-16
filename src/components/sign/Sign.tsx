@@ -2,10 +2,17 @@ import "./Sign.css";
 import { Container } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { useHistory } from "react-router-dom";
+import { useContext, useRef } from "react";
+import { AuthContext } from "../../context/AuthContext";
+
+// ↓ Logic to implement in the real login/signup pages ↓
+import { createAccount, signIn, signOut } from "../../firebase/utills";
 
 function Signup() {
-  let history = useHistory();
+  const user = useContext(AuthContext);
+
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   return (
     <Container id="main-container" className="d-grid h-100">
@@ -19,6 +26,7 @@ function Signup() {
         <Form.Group controlId="sign-in-email-address">
           <Form.Control
             type="email"
+            ref={emailRef}
             placeholder="Email address"
             autoComplete="username"
             className="position-relative"
@@ -27,6 +35,7 @@ function Signup() {
         <Form.Group controlId="sign-in-password">
           <Form.Control
             type="password"
+            ref={passwordRef}
             placeholder="Password"
             autoComplete="current-password"
             className="position-relative"
@@ -36,11 +45,18 @@ function Signup() {
           <Button
             variant="primary"
             size="lg"
-            onClick={() => {
-              history.push("/login");
-            }}
+            onClick={async () => signIn(emailRef, passwordRef)}
           >
             Sign in
+          </Button>
+        </div>
+        <div className="d-grid mt-3">
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={async () => createAccount(emailRef, passwordRef)}
+          >
+            Sign up
           </Button>
         </div>
       </Form>
