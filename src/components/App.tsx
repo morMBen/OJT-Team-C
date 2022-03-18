@@ -1,17 +1,41 @@
-import Signup from "./sign/Sign";
-import Login from "./login/Login";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Redirect,
+// } from 'react-router-dom';
+// import SpecialRoute from './specialRoute/SpecialRoute';
 
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import TempLoginPage from './TempLoginPage/TempLoginPage';
+// import TempPage from './TempLoginPage/TempPage';
+
 function App() {
   return (
     <>
-      <Router>
+      {/* <Router>
         <Switch>
-          <Route exact path="/sign" component={Signup} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path='/login'>
+            <SpecialRoute>
+              <TempLoginPage />
+              <Redirect to='/' />
+            </SpecialRoute>
+          </Route>
+
+          <Route exact path='/'>
+            <SpecialRoute>
+              <Redirect to='/login' />
+              <TempPage pageName='Home' />
+            </SpecialRoute>
+          </Route>
+
+          <Route exact path='/todo'>
+            <SpecialRoute>
+              <Redirect to='/login' />
+              <TempPage pageName='Todo' />
+            </SpecialRoute>
+          </Route>
         </Switch>
-      </Router>
+      </Router> */}
     </>
   );
 }
