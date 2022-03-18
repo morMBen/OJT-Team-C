@@ -1,9 +1,12 @@
-import React from 'react';
-import TempLoginPage from './TempLoginPage/TempLoginPage';
+import React from "react";
+import TempLoginPage from "./TempLoginPage/TempLoginPage";
+import { TodoPage } from "./TodoPage";
+
 function App() {
   return (
     <>
-      <TempLoginPage />
+      {/* <TempLoginPage /> */}
+      <TodoPage />
     </>
   );
 }
