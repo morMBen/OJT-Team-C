@@ -1,42 +1,43 @@
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Redirect,
-// } from 'react-router-dom';
-// import SpecialRoute from './specialRoute/SpecialRoute';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import TempLoginPage from "./TempLoginPage/TempLoginPage";
 
-// import TempLoginPage from './TempLoginPage/TempLoginPage';
-// import TempPage from './TempLoginPage/TempPage';
+// /
+// /login
+// /sign
+// /user/:id
 
 function App() {
   return (
-    <>
-      {/* <Router>
-        <Switch>
-          <Route exact path='/login'>
-            <SpecialRoute>
-              <TempLoginPage />
-              <Redirect to='/' />
-            </SpecialRoute>
-          </Route>
+    <Router>
+      <div className="App">
+        <div className="header">
+          <h1>Todo's App - Team C</h1>
+        </div>
+        <div className="body">
+          <Switch>
+            <Route exact path="/">
+              <h2>Home Page</h2>
+            </Route>
 
-          <Route exact path='/'>
-            <SpecialRoute>
-              <Redirect to='/login' />
-              <TempPage pageName='Home' />
-            </SpecialRoute>
-          </Route>
+            <Route path="/login">
+              <h2>Login Page</h2>
+            </Route>
 
-          <Route exact path='/todo'>
-            <SpecialRoute>
-              <Redirect to='/login' />
-              <TempPage pageName='Todo' />
-            </SpecialRoute>
-          </Route>
-        </Switch>
-      </Router> */}
-    </>
+            <Route path="/sign-up">
+              <h2>Sign-Up Page</h2>
+            </Route>
+
+            <Route path="/user/:id">
+              <h2>{`Welcome user ${"test"}`}</h2>
+            </Route>
+
+            <Route path="*">
+              <h2>There is no match for your url - are you lost?</h2>
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
