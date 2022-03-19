@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Todo } from "../model";
-import { AddTodo } from "./AddTodo";
-import { TodoList } from "./Todoist";
+import { Todo } from "../../model";
+import { AddTodo } from "../AddTodo/AddTodo";
+import { TodoList } from "../TodoList/Todoist";
 
 export const TodoPage: React.FC = () => {
   const [todo, setTodo] = useState<string>("");

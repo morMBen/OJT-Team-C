@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./AddTodo.css";
 
 interface Props {
   todo: string;
