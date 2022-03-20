@@ -9,9 +9,12 @@
 // import TempLoginPage from './TempLoginPage/TempLoginPage';
 // import TempPage from './TempLoginPage/TempPage';
 
+import { TodoPage } from "./TodoPage/TodoPage";
+
 function App() {
   return (
     <>
+      <TodoPage />
       {/* <Router>
         <Switch>
           <Route exact path='/login'>
