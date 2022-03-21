@@ -5,6 +5,7 @@ import {
   Switch,
 } from "react-router-dom";
 import SpecialRoute from "./specialRoute/SpecialRoute";
+import TempLoginPage from "./TempLoginPage/TempLoginPage";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
 
             <Route exact path="/login">
               <SpecialRoute>
-                <h2>Login Page</h2>
+                <TempLoginPage />
                 <Redirect to="/" />
               </SpecialRoute>
             </Route>
@@ -54,21 +55,3 @@ function App() {
 }
 
 export default App;
-
-/*
-            <Route exact path="/">
-              <h2>Home Page</h2>
-            </Route>
-
-            <Route path="/login">
-              <h2>Login Page</h2>
-            </Route>
-
-            <Route path="/sign-up">
-              <h2>Sign-Up Page</h2>
-            </Route>
-
-            <Route path="/user/:id">
-              <h2>{`Welcome user ${"test"}`}</h2>
-            </Route>
-*/
