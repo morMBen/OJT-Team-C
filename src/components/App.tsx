@@ -7,6 +7,8 @@ import {
 import SpecialRoute from "./specialRoute/SpecialRoute";
 import TempLoginPage from "./TempLoginPage/TempLoginPage";
 
+import { TodoPage } from "./TodoPage/TodoPage";
+
 function App() {
   return (
     <Router>
@@ -19,7 +21,7 @@ function App() {
             <Route exact path="/">
               <SpecialRoute>
                 <Redirect to="/login" />
-                <h2>Todos Page</h2>
+                <TodoPage />
               </SpecialRoute>
             </Route>
 
