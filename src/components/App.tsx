@@ -5,9 +5,10 @@ import {
   Switch,
 } from "react-router-dom";
 import SpecialRoute from "./specialRoute/SpecialRoute";
-import TempLoginPage from "./TempLoginPage/TempLoginPage";
-
 import { TodoPage } from "./TodoPage/TodoPage";
+import TempLoginPage from "./login/Login";
+import TempPage from "./login/TempPage";
+import MainBar from "./mainBar/MainBar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <h1>Todo's App - Team C</h1>
         </div>
         <div className="body">
+          <MainBar />
           <Switch>
             <Route exact path="/">
               <SpecialRoute>
@@ -53,7 +55,6 @@ function App() {
         </div>
       </div>
     </Router>
-  );
-}
+    )};
 
-export default App;
+    export default App;

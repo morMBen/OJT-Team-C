@@ -1,5 +1,4 @@
-import React from 'react';
-import { signOut } from '../../firebase/utills';
+import { signOut } from "../../firebase/utills";
 
 function TempPage({ pageName }: { pageName: string }) {
   return (
