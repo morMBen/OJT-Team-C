@@ -5,7 +5,7 @@ import {
   Switch,
 } from "react-router-dom";
 import SpecialRoute from "./specialRoute/SpecialRoute";
-import { TodoPage } from "./TodoPage/TodoPage";
+import { TodoPage } from "./todoPage/TodoPage";
 import TempLoginPage from "./login/Login";
 import TempPage from "./login/TempPage";
 import MainBar from "./mainBar/MainBar";
@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <div className="header">
+        {/* <div className="header">
           <h1>Todo's App - Team C</h1>
-        </div>
+        </div> */}
         <div className="body">
           <MainBar />
           <Switch>
@@ -47,14 +47,16 @@ function App() {
                 <Redirect to="/" />
               </SpecialRoute>
             </Route>
-
-            <Route path="*">
-              <Redirect to="/" />
-            </Route>
+            <div className="todosBoard">
+              <Route path="*">
+                <Redirect to="/" />
+              </Route>
+            </div>
           </Switch>
         </div>
       </div>
     </Router>
-    )};
+  );
+}
 
-    export default App;
+export default App;

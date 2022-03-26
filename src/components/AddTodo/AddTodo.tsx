@@ -15,11 +15,11 @@ export const AddTodo: React.FC<Props> = ({ todo, setTodo, handleAddTodo }) => {
           type="text"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          placeholder="add a todo"
+          placeholder="todo..."
           className="addTodoField"
         />
         <button type="submit" className="todoButton">
-          Add Todo
+          ADD
         </button>
       </form>
     </div>

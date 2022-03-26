@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Todo } from "../../model";
-import { AddTodo } from "../AddTodo/AddTodo";
-import { TodoList } from "../TodoList/Todoist";
+import { AddTodo } from "../addTodo/AddTodo";
+import { TodoList } from "../todoList/Todoist";
 
 export const TodoPage: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
@@ -19,7 +19,6 @@ export const TodoPage: React.FC = () => {
   console.log(todos);
   return (
     <div className="todoPage">
-      <h1>Todo page</h1>
       <AddTodo todo={todo} setTodo={setTodo} handleAddTodo={handleAddTodo} />
       <TodoList todos={todos} setTodos={setTodos} />
     </div>
