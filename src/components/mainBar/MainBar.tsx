@@ -5,7 +5,14 @@ import React, { Component } from "react";
 
 function MainBar() {
   return (
-    <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      sticky="top"
+      expand="sm"
+      collapseOnSelect
+      className="mainBar"
+    >
       <Navbar.Brand>
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB9OHK93NoXURI7WVklXdWG84xBdpJeFexgXKTxozM8RObLrSRPGD0BS5zQeiVKZ54qqA&usqp=CAU"
@@ -13,7 +20,6 @@ function MainBar() {
           height="40px"
         />{" "}
       </Navbar.Brand>
-
       <Navbar.Toggle className="coloring" />
       <Navbar.Collapse>
         <Nav>
@@ -28,6 +34,8 @@ function MainBar() {
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
+
+      <h2 className="title">Todo's App - Team C</h2>
     </Navbar>
   );
 }
