@@ -5,9 +5,8 @@ import {
   Switch,
 } from 'react-router-dom';
 import SpecialRoute from './specialRoute/SpecialRoute';
-import { TodoPage } from './TodoPage/TodoPage';
+import { TodoPage } from './todoPage/TodoPage';
 import TempLoginPage from './login/Login';
-import TempPage from './login/TempPage';
 import MainBar from './mainBar/MainBar';
 import SignUp from './signup/SignUp';
 
