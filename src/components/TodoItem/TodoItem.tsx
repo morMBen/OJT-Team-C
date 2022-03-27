@@ -18,7 +18,7 @@ export const TodoItem: React.FC<Props> = ({ todo, todos, setTodos }) => {
         <Dropdown.Item eventKey='1' onClick={handleEdit}>
           Edit
         </Dropdown.Item>
-        {/* <Dropdown.Item eventKey='2'>Delete</Dropdown.Item> */}
+        <Dropdown.Item eventKey='2'>Delete</Dropdown.Item>
         <Dropdown.Divider />
         <Dropdown.Item eventKey='3'>Share </Dropdown.Item>
       </DropdownButton>
