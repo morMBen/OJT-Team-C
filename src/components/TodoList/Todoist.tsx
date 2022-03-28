@@ -1,7 +1,7 @@
-import React from "react";
-import { Todo } from "../../model";
-import "./TodoList.css";
-import { TodoItem } from "../TodoItem/TodoItem";
+import React from 'react';
+import { Todo } from '../../model';
+import './TodoList.css';
+import { TodoItem } from '../todoItem/TodoItem';
 
 interface Props {
   todos: Todo[];
@@ -10,7 +10,7 @@ interface Props {
 
 export const TodoList: React.FC<Props> = ({ todos, setTodos }) => {
   return (
-    <div className="todos">
+    <div className='todos'>
       {todos.map((todo) => (
         <TodoItem todo={todo} key={todo.id} todos={todos} setTodos={setTodos} />
       ))}
