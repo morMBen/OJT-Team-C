@@ -3,11 +3,11 @@
   margin-bottom: 8 px;
   border: 1px solid rgb(212, 207, 207);
   border-radius: 3px;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
 }
 #dropdown-menu-align-end {
+  margin: 24px;
   background: blue;
   border-radius: 50%;
   width: 5px;
@@ -42,11 +42,28 @@
   box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
 }
 
-.dropdown-item {
+#dropdown-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.dropdown-item p {
+#dropdown-item p {
   margin: auto 0;
+}
+.todoItem p {
+  padding: 15px 15px 15px 21px;
+  margin: 0;
+}
+
+.todoItem form {
+  display: flex;
+  width: 100%;
+}
+.todoItem form button {
+  margin: 8px;
+  font-weight: 500;
+}
+#edit-todo-input {
+  margin: 8px;
+  background-color: transparent;
 }
