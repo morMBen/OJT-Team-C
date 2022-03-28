@@ -3,5 +3,67 @@
   margin-bottom: 8 px;
   border: 1px solid rgb(212, 207, 207);
   border-radius: 3px;
-  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+#dropdown-menu-align-end {
+  margin: 24px;
+  background: blue;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  padding: 0;
+  position: relative;
+  border: none;
+}
+#dropdown-menu-align-end::after,
+#dropdown-menu-align-end::before {
+  background: blue;
+  position: absolute;
+  content: '';
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  border: none;
+
+  top: 0;
+  transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+  transition-timing-function: ease-in-out;
+}
+
+#dropdown-menu-align-end::before {
+  left: 7px;
+}
+#dropdown-menu-align-end::after {
+  right: 7px;
+}
+#dropdown-menu-align-end:focus::after,
+#dropdown-menu-align-end:focus::before {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 50%);
+}
+
+#dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#dropdown-item p {
+  margin: auto 0;
+}
+.todoItem p {
+  padding: 15px 15px 15px 21px;
+  margin: 0;
+}
+
+.todoItem form {
+  display: flex;
+  width: 100%;
+}
+.todoItem form button {
+  margin: 8px;
+  font-weight: 500;
+}
+#edit-todo-input {
+  margin: 8px;
+  background-color: transparent;
 }
