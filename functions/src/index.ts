@@ -11,7 +11,9 @@ const db = admin.firestore();
 const app = express();
 //////////////////////////
 
-const createUser = (req: Request, res: Response) => {
+// create user should check if user is already exist
+//maybe checking in the front end with another function?
+const createUser = async (req: Request, res: Response) => {
   try {
     const { email, userName, password } = req.body;
 
@@ -24,13 +26,23 @@ const createUser = (req: Request, res: Response) => {
       res.send(JSON.stringify(result));
       return;
     }
+
     const user = {
+      email: email,
+      username: userName,
+      password: password,
+      appColor: null,
       newToApp: true,
     };
 
     await db.collection("users").add(user);
+    const result = {
+        status: "succeed",
+        reason: "user has been created successfully",
+      };
+
     res.status(200);
-    res.send("createUser response");
+    res.send(JSON.stringify(result));
   } catch (error) {
     res.status(500);
     res.send(error);
