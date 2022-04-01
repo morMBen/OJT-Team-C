@@ -3,7 +3,6 @@ import * as express from "express";
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 import StatusCodes from "http-status-codes";
-import { user } from "firebase-functions/v1/auth";
 
 //////////////////////////
 admin.initializeApp();
@@ -77,28 +76,6 @@ const getUser = async (req: Request, res: Response) => {
   }
 };
 
-const getUsers = async (req: Request, res: Response) => {
-  try {
-    const usersSnapshot = await db.collection("users").get();
-    console.log(`users snapshot: ${JSON.stringify(usersSnapshot)}`);
-
-    const usersDocs = usersSnapshot.docs;
-    console.log(`users docs: ${JSON.stringify(usersDocs)}`);
-
-    const users: any[] = [];
-
-    usersDocs.forEach((doc) => {
-      const userId = doc.id;
-      const userData = doc.data();
-
-      users.push({ userId, ...userData });
-    });
-
-    res.status(200);
-    res.send(JSON.stringify(users));
-  } catch (error) {}
-};
-
 const updateUser = async (req: Request, res: Response) => {
   try {
     // get user
@@ -125,12 +102,13 @@ const updateUser = async (req: Request, res: Response) => {
 //////////////////////////
 const createTodo = async (req: Request, res: Response) => {
   try {
-    const userId = req.params.id;
+    /*const userId = req.params.id;
     const {todo} = req.body;
-    const userTodos = await db.collection("users").doc(userId).get();
-    
-    userTodos.todos.push(todo);
-    await db.collection("users").doc(userId).update(userTodos);
+    const userSnapshot = await db.collection("users").doc(userId).get();
+    //const  = userSnapshot.data();
+
+    //todos.push(todo);
+    await db.collection("users").doc(userId).withConverter*/
 
     res.status(200);
     res.send("create a todo 2");
